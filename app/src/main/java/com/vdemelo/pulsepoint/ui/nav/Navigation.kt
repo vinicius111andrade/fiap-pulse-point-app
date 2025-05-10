@@ -5,7 +5,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.vdemelo.pulsepoint.ui.chat.ChatScreen
+import com.vdemelo.pulsepoint.ui.home.HomeScreen
+import com.vdemelo.pulsepoint.ui.onboarding.login.LoginScreen
+import com.vdemelo.pulsepoint.ui.onboarding.register.RegisterScreen
 import com.vdemelo.pulsepoint.ui.onboarding.welcome.WelcomeScreen
+import com.vdemelo.pulsepoint.ui.settings.SettingsScreen
 
 @Composable
 fun AppNavigation(
@@ -16,22 +21,19 @@ fun AppNavigation(
             WelcomeScreen(navController = navController)
         }
         composable(NavRoutes.LOGIN) {
-            WelcomeScreen(navController = navController)
-        }
-        composable(NavRoutes.SIGNUP) {
-            WelcomeScreen(navController = navController)
+            LoginScreen(navController = navController)
         }
         composable(NavRoutes.REGISTER) {
-            WelcomeScreen(navController = navController)
+            RegisterScreen(navController = navController)
         }
         composable(NavRoutes.HOME) {
-            WelcomeScreen(navController = navController)
+            HomeScreen(navController = navController)
         }
         composable(NavRoutes.CHAT) {
-            WelcomeScreen(navController = navController)
+            ChatScreen(navController = navController)
         }
         composable(NavRoutes.SETTINGS) {
-            WelcomeScreen(navController = navController)
+            SettingsScreen(navController = navController)
         }
     }
 }

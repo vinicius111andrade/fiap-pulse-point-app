@@ -1,4 +1,4 @@
-package com.vdemelo.pulsepoint.ui.onboarding.login
+package com.vdemelo.pulsepoint.ui.onboarding.register
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,7 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun LoginScreen(
+fun RegisterScreen(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController()
 ) {
@@ -24,6 +24,6 @@ fun LoginScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "Tela de Login")
+        Text(text = "Tela de Cadastro")
     }
 }
