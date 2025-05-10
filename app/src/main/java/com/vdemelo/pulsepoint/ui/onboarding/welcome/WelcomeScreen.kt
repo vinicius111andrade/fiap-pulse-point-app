@@ -20,10 +20,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.vdemelo.pulsepoint.R
+import com.vdemelo.pulsepoint.ui.nav.NavRoutes
 
 @Composable
-fun Welcome(modifier: Modifier = Modifier) {
+fun WelcomeScreen(
+    modifier: Modifier = Modifier,
+    navController: NavHostController = rememberNavController()
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -35,7 +41,6 @@ fun Welcome(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .weight(1f)
-                .contentAlignment(Alignment.Top)
         )
         Image(
             modifier = Modifier
@@ -49,7 +54,7 @@ fun Welcome(modifier: Modifier = Modifier) {
 
         Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Button(
-                onClick = { /* TODO: Implement enter action */ },
+                onClick = { navController.navigate(NavRoutes.LOGIN) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp)
@@ -59,7 +64,7 @@ fun Welcome(modifier: Modifier = Modifier) {
             }
 
             Button(
-                onClick = { /* TODO: Implement continue action */ },
+                onClick = { navController.navigate(NavRoutes.SIGNUP) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp)
@@ -74,5 +79,5 @@ fun Welcome(modifier: Modifier = Modifier) {
 @Preview(showBackground = true, widthDp = 320, heightDp = 640)
 @Composable
 fun WelcomePreview() {
-    Welcome()
+    WelcomeScreen()
 }
