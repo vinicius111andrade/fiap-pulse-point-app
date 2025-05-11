@@ -64,7 +64,7 @@ fun WelcomeScreen(
             }
 
             Button(
-                onClick = { navController.navigate(NavRoutes.SIGNUP) },
+                onClick = { navController.navigate(NavRoutes.REGISTER) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp)
