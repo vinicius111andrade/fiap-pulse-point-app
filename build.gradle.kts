@@ -5,6 +5,11 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.kapt) apply false
     alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.gradle.versions)
+    alias(libs.plugins.version.catalog.update)
+    alias(libs.plugins.kotlin.parcelize) apply false
+    alias(libs.plugins.compose) apply false
+    alias(libs.plugins.spotless) apply false
 }
 
 // Enable parallel builds for faster compilation
@@ -16,16 +21,6 @@ gradle.projectsEvaluated {
         options.compilerArgs.add("-Xlint:deprecation")
         options.compilerArgs.add("-Xlint:unchecked")
     }
-//    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-//        kotlinOptions {
-//            jvmTarget = "11"
-//            freeCompilerArgs = freeCompilerArgs + listOf(
-//                "-opt-in=kotlin.RequiresOptIn",
-//                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-//                "-opt-in=kotlinx.coroutines.FlowPreview"
-//            )
-//        }
-//    }
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)

@@ -70,8 +70,6 @@ dependencies {
 
     // Dependency Injection with Hilt
     implementation(libs.hilt.android)
-    implementation(libs.androidx.material3.android)
-    implementation(libs.androidx.navigation.compose.jvmstubs)
     kapt(libs.hilt.android.compiler)
 
     // Unit Testing
