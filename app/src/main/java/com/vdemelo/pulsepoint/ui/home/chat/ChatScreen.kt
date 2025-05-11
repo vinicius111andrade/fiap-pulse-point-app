@@ -1,4 +1,4 @@
-package com.vdemelo.pulsepoint.ui.chat
+package com.vdemelo.pulsepoint.ui.home.chat
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

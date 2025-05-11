@@ -1,4 +1,4 @@
-package com.vdemelo.pulsepoint.ui.settings
+package com.vdemelo.pulsepoint.ui.home.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

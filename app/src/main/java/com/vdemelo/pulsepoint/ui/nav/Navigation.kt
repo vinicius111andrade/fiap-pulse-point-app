@@ -5,12 +5,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.vdemelo.pulsepoint.ui.chat.ChatScreen
+import com.vdemelo.pulsepoint.ui.home.chat.ChatScreen
 import com.vdemelo.pulsepoint.ui.home.HomeScreen
 import com.vdemelo.pulsepoint.ui.onboarding.login.LoginScreen
 import com.vdemelo.pulsepoint.ui.onboarding.register.RegisterScreen
 import com.vdemelo.pulsepoint.ui.onboarding.welcome.WelcomeScreen
-import com.vdemelo.pulsepoint.ui.settings.SettingsScreen
+import com.vdemelo.pulsepoint.ui.home.settings.SettingsScreen
 
 @Composable
 fun AppNavigation(
